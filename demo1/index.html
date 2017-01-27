@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--<link rel="stylesheet" href="css/media.css">-->
+</head>
+
+<body>
+    <div class="hidden-xs wtopbar container-fluid">
+        <a href="http://www.jresun.cn" class="btn btn-primary">JreSun</a>
+    </div>
+    <div class="visible-xs container-fluid mob-nav" style="padding:0px;margin:0px;">
+        <ul class="mob-nav-menu">
+            <li>
+                <a class="nav-active" href="index.html">推荐</a>
+            </li>
+            <li>
+                <a href="jokeword.html">笑话</a>
+            </li>
+            <li>
+                <a href="jokepic.html">趣图</a>
+            </li>
+            <li>
+                <a href="">科技</a>
+            </li>
+            <li>
+                <a href="">娱乐</a>
+            </li>
+            <li>
+                <a href="">社会</a>
+            </li>
+            <li>
+                <a href="">国际</a>
+            </li>
+            <li>
+                <a href="">时尚</a>
+            </li>
+            <li>
+                <a href="">财经</a>
+            </li>
+            <li>
+                <a href="">体育</a>
+            </li>
+            <li>
+                <a href="">军事</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="left-div col-sm-2 col-md-2 hidden-xs">
+                <ul class="left-menu">
+                    <li>
+                        <a class="active" href="index.html">推荐</a>
+                    </li>
+                    <li>
+                        <a href="jokeword.html">笑话</a>
+                    </li>
+                    <li>
+                        <a href="jokepic.html">趣图</a>
+                    </li>
+                    <li>
+                        <a href="">科技</a>
+                    </li>
+                    <li>
+                        <a href="">娱乐</a>
+                    </li>
+                    <li>
+                        <a href="">社会</a>
+                    </li>
+                    <li>
+                        <a href="">国际</a>
+                    </li>
+                    <li>
+                        <a href="">时尚</a>
+                    </li>
+                    <li>
+                        <a href="">财经</a>
+                    </li>
+                    <li>
+                        <a href="">体育</a>
+                    </li>
+                    <li>
+                        <a href="">军事</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-content col-sm-10 col-md-10">
+                <div id="app">
+                    <ul class="row">
+                        <li class="row" class="col-xs-12" v-for="item in items">
+                            <a :href='item.url'><img class="col-xs-3 img-responsive" :src='item.thumbnail_pic_s' alt="抱歉服务器爆了，请刷新一下"></a>
+                            <br/>
+                            <div class="col-xs-9 box">
+                                <a class="news-title" :href='item.url'>{{item.title}}</a>
+                                <br/>
+                                <div class="news-foot">
+                                    <span>{{item.category}}</span>
+                                    <span>{{item.author_name}}</span>
+                                    <span>{{item.date}}</span>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <!--<button v-show='3<4' v-on:mouseenter="a" v-on:mouseleave="b" v-bind:class="{ h: isActive }" type="button">按钮</button>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--<a href="http://v.juhe.cn/joke/randJoke.php?key=e4a374b02eeb3945255703caf4816535&type=pi">aaa</a>-->
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="http://v.juhe.cn/toutiao/index?type=top&key=84f8ec4cc989878d051dfc851b8c250a"></script>-->
+    <!--<script src="js/jquery.jsonp.js"></script>-->
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/vue.min.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
