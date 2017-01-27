@@ -38,7 +38,7 @@ body {
   background: white;
   overflow: hidden; }
   .mob-nav .mob-nav-menu {
-    width: 616px;
+    width: 1500px;
     height: 40px;
     margin: 0;
     padding: 0;
@@ -108,13 +108,13 @@ body {
         padding: 10px 10px 10px 0 !important; }
       .container .right-content ul li .box .news-title {
         color: #222222;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.5;
         text-overflow: -o-ellipsis-lastline;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical; }
       .container .right-content ul li .box .news-foot {
         text-overflow: -o-ellipsis-lastline;
@@ -126,7 +126,8 @@ body {
         .container .right-content ul li .box .news-foot span {
           font-size: 12px;
           display: inline-block;
-          padding: 0 2px; }
+          padding: 0 2px;
+          margin: 0 0 10px 0; }
         .container .right-content ul li .box .news-foot span:nth-child(1) {
           border: 1px solid #FF7920;
           color: #FF7920; }

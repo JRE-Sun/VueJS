@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jokepic.css">
+    <link rel="stylesheet" href="css/fashion.css">
     <!--<link rel="stylesheet" href="css/media.css">-->
 </head>
 
@@ -23,7 +23,7 @@
                 <a href="jokeword.html">笑话</a>
             </li>
             <li>
-                <a class="nav-active" href="jokepic.html">趣图</a>
+                <a href="jokepic.html">趣图</a>
             </li>
             <li>
                 <a href="technology.html">科技</a>
@@ -38,7 +38,7 @@
                 <a href="international.html">国际</a>
             </li>
             <li>
-                <a href="fashion.html">时尚</a>
+                <a class="nav-active" href="fashion.html">时尚</a>
             </li>
             <li>
                 <a href="finance.html">财经</a>
@@ -62,7 +62,7 @@
                         <a href="jokeword.html">笑话</a>
                     </li>
                     <li>
-                        <a class="active" href="jokepic.html">趣图</a>
+                        <a href="jokepic.html">趣图</a>
                     </li>
                     <li>
                         <a href="technology.html">科技</a>
@@ -77,7 +77,7 @@
                         <a href="international.html">国际</a>
                     </li>
                     <li>
-                        <a href="fashion.html">时尚</a>
+                        <a class="active" href="fashion.html">时尚</a>
                     </li>
                     <li>
                         <a href="finance.html">财经</a>
@@ -95,8 +95,18 @@
                 <div id="app">
                     <ul class="row">
                         <li class="row" class="col-xs-12" v-for="item in items">
-                            <p class=" col-xs-12">{{item.content}}</p>
-                            <img id="myimg" class="col-xs-12 img-size" :src='item.url' alt="抱歉服务器爆了，请刷新一下">
+                            <a :href='item.url'><img class="col-xs-3 img-responsive" :src='item.thumbnail_pic_s' alt="抱歉服务器爆了，请刷新一下"></a>
+                            <br/>
+                            <div class="col-xs-9 box">
+                                <a class="news-title" :href='item.url'>{{item.title}}</a>
+                                <br/>
+                                <div class="news-foot">
+                                    <span>{{item.category}}</span>
+                                    <span>{{item.author_name}}</span>
+                                    <span>{{item.date}}</span>
+                                </div>
+
+                            </div>
                         </li>
                     </ul>
                     <!--<button v-show='3<4' v-on:mouseenter="a" v-on:mouseleave="b" v-bind:class="{ h: isActive }" type="button">按钮</button>-->
@@ -113,7 +123,7 @@
     <!--<script src="js/jquery.jsonp.js"></script>-->
     <script src="http://oj3eoe0eo.bkt.clouddn.com/vue.min.js"></script>
     <script src="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.js"></script>
-    <script src="js/jokepic.js"></script>
+    <script src="js/fashion.js"></script>
 
 </body>
 

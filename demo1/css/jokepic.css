@@ -38,7 +38,7 @@ body {
   background: white;
   overflow: hidden; }
   .mob-nav .mob-nav-menu {
-    width: 616px;
+    width: 1500px;
     height: 40px;
     margin: 0;
     padding: 0;
@@ -113,29 +113,5 @@ body {
         padding: 10px 10px 10px 0 !important; }
       .container .right-content ul li .img-size {
         width: 50%; }
-
-@media screen and (min-width: 480px) {
-  .right-content ul {
-    margin-left: 10px; }
-
-  .box .news-title {
-    font-size: 18px !important;
-    line-height: 1.4 !important; } }
-@media (min-width: 768px) {
-  .right-content ul {
-    margin-left: 10px; }
-
-  .box .news-title {
-    font-weight: 600;
-    font-size: 18px !important;
-    line-height: 1.4 !important; } }
-@media (min-width: 992px) {
-  .right-content ul {
-    margin-left: 20px; }
-
-  .box .news-title {
-    font-weight: 600;
-    font-size: 20px !important;
-    line-height: 1.4 !important; } }
 
 /*# sourceMappingURL=jokepic.css.map */
