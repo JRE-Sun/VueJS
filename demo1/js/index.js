@@ -1,4 +1,18 @@
 window.onload = function() {
+    Vue.use(Vue.lazyimg, {
+        /**
+         * 是否开启淡入效果的全局选项
+         */
+        fadein: true,
+        /**
+         * 是否忽略横向懒加载的全局选项
+         */
+        nohori: false,
+        /**
+         * 对屏幕滚动的速度的阈值，滚动速度高于此值时，不加载图片
+         */
+        speed: 20
+    })
     $.ajax({
         type: "get",
         url: "http://www.jresun.cn/demo/VueJS/demo1/php/index.php",
