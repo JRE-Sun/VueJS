@@ -10,15 +10,17 @@ li {
   margin: 0;
   padding: 0px; }
 
+.col-sm-9,
+.col-xs-3,
 .col-md-10,
 .col-md-2,
 .col-sm-2,
-.col-sm-10 {
+.col-xs-12,
+.col-sm-10,
+.col-xs-9,
+.col-xs-4 {
   padding: 0px;
   overflow: hidden; }
-
-.col-xs-9 {
-  padding: 0px; }
 
 a:link {
   text-decoration: none; }
@@ -38,6 +40,7 @@ body {
   background: white;
   overflow: hidden; }
   .mob-nav .mob-nav-menu {
+    position: relative;
     width: 1500px;
     height: 40px;
     margin: 0;
@@ -102,43 +105,57 @@ body {
     width: 100%; }
     .container .right-content ul li {
       border-bottom: 1px solid #ccc; }
-      .container .right-content ul li a {
-        display: block; }
-      .container .right-content ul li img {
-        padding: 10px 10px 10px 0 !important; }
-      .container .right-content ul li .box .news-title {
-        color: #222222;
-        font-size: 16px;
-        line-height: 1.5;
-        text-overflow: -o-ellipsis-lastline;
+      .container .right-content ul li .right-content-a {
+        display: block;
         overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical; }
-      .container .right-content ul li .box .news-foot {
-        text-overflow: -o-ellipsis-lastline;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical; }
-        .container .right-content ul li .box .news-foot span {
-          font-size: 12px;
-          display: inline-block;
-          padding: 0 2px;
-          margin: 0 0 10px 0; }
-        .container .right-content ul li .box .news-foot span:nth-child(1) {
-          border: 1px solid #FF7920;
-          color: #FF7920; }
+        height: 100px; }
+        .container .right-content ul li .right-content-a img {
+          height: calc(100% - 20px);
+          width: calc(100% - 2px);
+          margin: 10px auto;
+          margin-left: 2px; }
+      .container .right-content ul li .box {
+        padding: 0px; }
+        .container .right-content ul li .box .news-title {
+          margin-top: 15px;
+          color: #222222;
+          font-size: 16px;
+          line-height: 1.5;
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical; }
+        .container .right-content ul li .box .news-foot {
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          margin: 10px 0; }
+          .container .right-content ul li .box .news-foot span {
+            font-size: 12px;
+            display: inline-block; }
+          .container .right-content ul li .box .news-foot span:nth-child(1) {
+            border: 1px solid #FF7920;
+            color: #FF7920; }
+        .container .right-content ul li .box .moreimg {
+          height: calc(100% - 10px);
+          width: 100%;
+          margin: 0;
+          margin-left: 2px; }
 
-@media screen and (min-width: 480px) {
-  .right-content ul {
-    margin-left: 10px; }
-
+@media (min-width: 480px) {
   .box .news-title {
     font-size: 18px !important;
-    line-height: 1.4 !important; } }
+    line-height: 1.4 !important; }
+
+  .container .right-content ul li .right-content-a {
+    display: block;
+    overflow: hidden;
+    height: 140px; } }
 @media (min-width: 768px) {
   .right-content ul {
     margin-left: 10px; }
@@ -146,14 +163,28 @@ body {
   .box .news-title {
     font-weight: 600;
     font-size: 18px !important;
-    line-height: 1.4 !important; } }
+    line-height: 1.4 !important; }
+
+  .container .right-content ul li .right-content-a {
+    display: block;
+    overflow: hidden;
+    height: 140px; } }
 @media (min-width: 992px) {
   .right-content ul {
     margin-left: 20px; }
 
   .box .news-title {
     font-weight: 600;
-    font-size: 20px !important;
-    line-height: 1.4 !important; } }
+    font-size: 24px !important;
+    line-height: 1.4 !important; }
+
+  img {
+    height: 200px;
+    padding: 10px 10px 10px 0; }
+
+  .container .right-content ul li .right-content-a {
+    display: block;
+    overflow: hidden;
+    height: 200px; } }
 
 /*# sourceMappingURL=sports.css.map */

@@ -1,15 +1,19 @@
 window.onload = function() {
     var app;
-    var data;
+    var newsId = "5572a10ab3cdc86cf39001ec";
+    var firsturl = "https://route.showapi.com/109-35?channelId=" + newsId + "&maxResult=20&needAllList=0&needContent=0&needHtml=0&page=1&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
     $.ajax({
         type: "get",
-        url: "http://www.jresun.cn/demo/VueJS/demo1/php/jokepic.php",
+        url: firsturl,
         dataType: "json",
         success: function(json) {
+            // alert(json);
+            console.log(json);
+            console.log(json.showapi_res_body.pagebean.contentlist[4].imageurls.length);
             app = new Vue({
                 el: '#app',
                 data: {
-                    items: json.result,
+                    items: json.showapi_res_body.pagebean.contentlist,
                     isActive: false
                 },
                 methods: {
@@ -33,44 +37,29 @@ window.onload = function() {
         }
     });
 
-    function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"
-        ];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
-
-    if (!IsPC()) {
-        $("#myimg").removeClass("img-size");
-    }
-
+    var page = 1;
     $(window).scroll(function(event) {    
         var  sm = $(this).scrollTop() + $(window).height(); 
         var  dsm = $(document).height();
-        if (sm == dsm) {
+        console.log(sm);
+        console.log(dsm);
+        if (dsm == sm) {
+            var myurl = "https://route.showapi.com/109-35?channelId=" + newsId + "&maxResult=20&needAllList=0&needContent=0&needHtml=0&page=" + (++page) + "&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
             $.ajax({
                 type: "get",
-                url: "http://www.jresun.cn/demo/VueJS/demo1/php/jokepic.php",
+                url: myurl,
                 dataType: "json",
                 success: function(json) {
-                    for (var i = 0; i < json.result.length; i++) {
-                        app.loadMore(json.result[i]);
+                    for (var i = 0; i < json.showapi_res_body.pagebean.contentlist.length; i++) {
+                        app.loadMore(json.showapi_res_body.pagebean.contentlist[i]);
                     }
-
+                    console.log(json);
                 },
                 error: function(e) {
                     console.log(e);
                 }
             });
+            // alert();
         }
     });
 
