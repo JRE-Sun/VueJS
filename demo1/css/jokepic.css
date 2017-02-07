@@ -48,37 +48,32 @@ body {
 }
 
 .mob-nav .mob-nav-menu {
-    width: 1500px;
     height: 40px;
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
     background-color: #FCFCFC;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
 }
 
-.mob-nav .mob-nav-menu li {
+.mob-nav .mob-nav-menu .swiper-slide {
     height: 40px;
     line-height: 40px;
     text-align: center;
     float: left;
 }
 
-.mob-nav .mob-nav-menu li a {
+.mob-nav .mob-nav-menu .swiper-slide a {
     display: inline-block;
-    padding: 0 10px;
     font-size: 18px;
     color: #333;
 }
 
-.mob-nav .mob-nav-menu li .nav-active {
+.mob-nav .mob-nav-menu .swiper-slide .nav-active {
     color: #FF6D34;
-}
-
-.mob-nav .mob-nav-menu-top {
-    position: fixed;
-    top: 0px;
-    z-index: 9999;
 }
 
 .container .navFix {
