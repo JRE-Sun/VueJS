@@ -84,7 +84,6 @@ window.onload = function() {
         slidesPerView: 6,
         paginationClickable: true,
         spaceBetween: 5,
-        freeMode: false,
-        initialSlide: 6
+        initialSlide: 5
     });
 }

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.css">
     <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/swiper-3.4.1.min.css">
-    <link rel="stylesheet" href="css/jokeword.css">
+    <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/video-js.min.css">
+    <link rel="stylesheet" href="css/funny.css">
     <!--<link rel="stylesheet" href="css/media.css">-->
 </head>
 
@@ -19,8 +20,7 @@
         <div class="swiper-container mob-nav-menu">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="index.html">社会</a></div>
-                <div class="swiper-slide"><a class="nav-active" href="jokeword.html">笑话</a></div>
-                <div class="swiper-slide"><a href="jokepic.html">趣图</a></div>
+                <div class="swiper-slide"><a class="nav-active" href="funny.html">搞笑</a></div>
                 <div class="swiper-slide"> <a href="technology.html">科技</a></div>
                 <div class="swiper-slide"><a href="entertainment.html">娱乐</a></div>
                 <div class="swiper-slide"><a href="car.html">汽车</a></div>
@@ -41,10 +41,7 @@
                         <a href="index.html">社会</a>
                     </li>
                     <li>
-                        <a class="active" href="jokeword.html">笑话</a>
-                    </li>
-                    <li>
-                        <a href="jokepic.html">趣图</a>
+                        <a class="active" href="funny.html">搞笑</a>
                     </li>
                     <li>
                         <a href="technology.html">科技</a>
@@ -80,15 +77,30 @@
             <div class="right-content col-sm-10 col-md-10">
                 <div id="app">
                     <ul class="row">
-                        <li class="row" class="col-xs-12" v-for="item in items">
-                            <p>{{item.content}}</p>
+                        <li class="row" v-for="item in items">
+                            <div class="col-xs-12">
+                                <span class="username">{{item.name}}</span>
+                                <span class="time">{{item.create_time}}</span>
+                                <span class="text">{{item.text}}</span>
+                            </div>
+                            <template v-if=item.image0>
+                                <div class="div-img">
+                                    <img class="img-responsive lazy" :src='item.image0' alt="抱歉服务器爆了，请刷新一下">
+                                </div>     
+                            </template>
+                            <template v-if=item.video_uri>
+                                 <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered img-responsive" controls preload="none"  data-setup="{}">
+                                <source :src='item.video_uri' type='video/mp4' />
+                                <source :src='item.video_uri' type='video/webm' />
+                                <source :src='item.video_uri' type='video/ogg' />
+                                </video>
+                            </template>
+                        </li>
+                    </ul>
+                    <!--<button v-show='3<4' v-on:mouseenter="a" v-on:mouseleave="b" v-bind:class="{ h: isActive }" type="button">按钮</button>-->
                 </div>
-                </li>
-                </ul>
-                <!--<button v-show='3<4' v-on:mouseenter="a" v-on:mouseleave="b" v-bind:class="{ h: isActive }" type="button">按钮</button>-->
             </div>
         </div>
-    </div>
 
     </div>
 
@@ -99,9 +111,11 @@
     <!--<script src="js/jquery.jsonp.js"></script>-->
     <script src="http://oj3eoe0eo.bkt.clouddn.com/vue.min.js"></script>
     <script src="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/html5media.min.js"></script>
     <script src="http://oj3eoe0eo.bkt.clouddn.com/swiper.min.js"></script>
-    <script src="js/jokeword.js"></script>
-
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/video.js"></script>
+    <!--<script src="http://oj3eoe0eo.bkt.clouddn.com/vue.lazyimg.js"></script>-->
+    <script src="js/funny.js"></script>
 </body>
 
 </html>

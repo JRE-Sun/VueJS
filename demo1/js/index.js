@@ -80,11 +80,11 @@ window.onload = function() {
         })
         // 固定导航条代码结束
 
+
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         slidesPerView: 6,
         paginationClickable: true,
-        spaceBetween: 5,
-        freeMode: false
+        freeMode: true
     });
 }

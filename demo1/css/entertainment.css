@@ -40,6 +40,7 @@ body {
   background: white;
   overflow: hidden; }
   .mob-nav .mob-nav-menu {
+    width: 100%;
     height: 40px;
     margin: 0;
     padding: 0;
@@ -50,10 +51,10 @@ body {
     top: 0px;
     z-index: 9999; }
     .mob-nav .mob-nav-menu .swiper-slide {
+      width: 16.6% !important;
       height: 40px;
       line-height: 40px;
-      text-align: center;
-      float: left; }
+      text-align: center; }
       .mob-nav .mob-nav-menu .swiper-slide a {
         display: inline-block;
         font-size: 18px;

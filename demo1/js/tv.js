@@ -83,8 +83,7 @@ window.onload = function() {
         pagination: '.swiper-pagination',
         slidesPerView: 6,
         paginationClickable: true,
-        spaceBetween: 5,
-        freeMode: false,
+        freeMode: true,
         initialSlide: 7
     });
 }
