@@ -124,6 +124,9 @@ body {
 #example_video_1 {
   float: left; }
 
+#vue img {
+  transition: opacity 1.5s !important; }
+
 @media (min-width: 480px) {
   .box .news-title {
     font-size: 18px !important;
@@ -145,7 +148,13 @@ body {
   .container .right-content ul li .right-content-a {
     display: block;
     overflow: hidden;
-    height: 140px; } }
+    height: 140px; }
+
+  .div-img {
+    width: 550px; }
+
+  .right-content ul {
+    width: 70% !important; } }
 @media (min-width: 992px) {
   .div-img {
     width: 550px; }
@@ -154,6 +163,9 @@ body {
     width: 70% !important; } }
 @media (min-width: 1200px) {
   .right-content ul {
-    width: 60% !important; } }
+    width: 60% !important; }
+
+  .right-content ul {
+    margin-left: 75px; } }
 
 /*# sourceMappingURL=funny.css.map */

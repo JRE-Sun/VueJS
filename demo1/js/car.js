@@ -1,4 +1,5 @@
 window.onload = function() {
+    Vue.use(Vue.lazyimg, {});
     var app;
     var newsId = "5572a109b3cdc86cf39001e5";
     var firsturl = "https://route.showapi.com/109-35?channelId=" + newsId + "&maxResult=20&needAllList=0&needContent=0&needHtml=0&page=1&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
@@ -85,6 +86,6 @@ window.onload = function() {
         slidesPerView: 6,
         paginationClickable: true,
         freeMode: true,
-        initialSlide: 3
+        initialSlide: 2
     });
 }

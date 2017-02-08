@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.css">
     <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/swiper-3.4.1.min.css">
     <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/video-js.min.css">
-    <link rel="stylesheet" href="css/funny.css">
+    <link rel="stylesheet" href="css/jokepic.css">
     <!--<link rel="stylesheet" href="css/media.css">-->
 </head>
 
@@ -20,8 +20,8 @@
         <div class="swiper-container mob-nav-menu">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="index.html">社会</a></div>
-                <div class="swiper-slide"><a class="nav-active" href="funny.html">搞笑</a></div>
-                <div class="swiper-slide"><a href="jokepic.html">动图</a></div>
+                <div class="swiper-slide"><a href="funny.html">搞笑</a></div>
+                <div class="swiper-slide"><a class="nav-active" href="jokepic.html">动图</a></div>
                 <div class="swiper-slide"><a href="joketext.html">笑话</a></div>
                 <div class="swiper-slide"> <a href="technology.html">科技</a></div>
                 <div class="swiper-slide"><a href="entertainment.html">娱乐</a></div>
@@ -43,10 +43,11 @@
                         <a href="index.html">社会</a>
                     </li>
                     <li>
-                        <a class="active" href="funny.html">搞笑</a>
+                        <a href="funny.html">搞笑</a>
                     </li>
+
                     <li>
-                        <a href="jokepic.html">动图</a>
+                        <a class="active" href="jokepic.html">动图</a>
                     </li>
                     <li>
                         <a href="joketext.html">笑话</a>
@@ -87,22 +88,14 @@
                     <ul class="row">
                         <li class="row" v-for="item in items">
                             <div class="col-xs-12">
-                                <span class="username">{{item.name}}</span>
-                                <span class="time">{{item.create_time}}</span>
-                                <span class="text">{{item.text}}</span>
+                                <span class="username">{{item.title}}</span>
+                                <span class="time">{{item.ct}}</span>
                             </div>
-                            <template v-if=item.image0>
-                                <div id="vue" class="div-img">
-                                    <img class="img-responsive" v-lazyload:opt.fadein="item.image0" src="http://oj3eoe0eo.bkt.clouddn.com/a.png" alt="抱歉服务器爆了，请刷新一下">
-                                </div>     
-                            </template>
-                            <template v-if=item.video_uri>
-                                 <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered img-responsive" controls preload="none"  data-setup="{}">
-                                <source :src='item.video_uri' type='video/mp4' />
-                                <source :src='item.video_uri' type='video/webm' />
-                                <source :src='item.video_uri' type='video/ogg' />
-                                </video>
-                            </template>
+
+                            <div id="vue" class="div-img">
+                                <img class="img-responsive" v-lazyload:opt.fadein="item.img" src="http://oj3eoe0eo.bkt.clouddn.com/a.png" alt="抱歉服务器爆了，请刷新一下">
+                            </div>
+
                         </li>
                     </ul>
                     <!--<button v-show='3<4' v-on:mouseenter="a" v-on:mouseleave="b" v-bind:class="{ h: isActive }" type="button">按钮</button>-->
@@ -118,7 +111,7 @@
     <!--<script src="http://oj3eoe0eo.bkt.clouddn.com/html5media.min.js"></script>-->
     <script src="http://oj3eoe0eo.bkt.clouddn.com/swiper.min.js"></script>
     <script src="http://oj3eoe0eo.bkt.clouddn.com/video.js"></script>
-    <script src="js/funny.js"></script>
+    <script src="js/jokepic.js"></script>
 </body>
 
 </html>

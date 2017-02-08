@@ -155,6 +155,10 @@ body {
     float: left;
 }
 
+#vue img {
+    transition: opacity 1.5s !important;
+}
+
 @media (min-width: 480px) {
     // .right-content ul {
     //     margin-left: 10px;
@@ -185,6 +189,12 @@ body {
         overflow: hidden;
         height: 140px;
     }
+    .div-img {
+        width: 550px;
+    }
+    .right-content ul {
+        width: 70%!important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -199,5 +209,8 @@ body {
 @media (min-width: 1200px) {
     .right-content ul {
         width: 60%!important;
+    }
+    .right-content ul {
+        margin-left: 75px;
     }
 }

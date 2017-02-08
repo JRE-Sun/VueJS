@@ -1,4 +1,5 @@
 window.onload = function() {
+    Vue.use(Vue.lazyimg, {});
     var app;
     var firsturl = "https://route.showapi.com/255-1?page=1&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
 
@@ -14,7 +15,7 @@ window.onload = function() {
                 el: '#app',
                 data: {
                     items: json.showapi_res_body.pagebean.contentlist,
-                    isActive: false
+                    isActive: false,
                 },
                 methods: {
                     a: function() {

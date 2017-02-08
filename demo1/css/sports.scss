@@ -181,6 +181,10 @@ body {
     }
 }
 
+img {
+    transition: opacity 1.5s !important;
+}
+
 @media (min-width: 480px) {
     // .right-content ul {
     //     margin-left: 10px;

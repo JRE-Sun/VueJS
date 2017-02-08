@@ -48,7 +48,6 @@ body {
     overflow: hidden;
     .mob-nav-menu {
         // position: relative;
-        width: 100%;
         height: 40px;
         margin: 0;
         padding: 0;
@@ -58,6 +57,7 @@ body {
         position: fixed;
         top: 0px;
         z-index: 9999;
+        width: 100%;
         .swiper-slide {
             width: 16.6%!important;
             height: 40px;
@@ -125,55 +125,21 @@ body {
             width: 100%;
             li {
                 border-bottom: 1px solid #ccc;
-                .right-content-a {
-                    display: block;
-                    overflow: hidden;
-                    height: 100px;
-                    img {
-                        height: calc(100% - 20px);
-                        width: calc(100% - 2px);
-                        margin: 10px auto;
-                        margin-left: 2px;
-                    }
+                padding-bottom: 20px;
+                .title {
+                    float: left;
+                    font-size: 18px;
+                    padding-top: 20px;
+                    padding-bottom: 10px;
                 }
-                .box {
-                    padding: 0px;
-                    .news-title {
-                        margin-top: 15px;
-                        color: #222222;
-                        font-size: 18px;
+                .text {
+                    float: left;
+                    font-size: 18px;
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+                    letter-spacing: 2px;
+                    p {
                         line-height: 1.5;
-                        text-overflow: -o-ellipsis-lastline;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                    }
-                    .news-foot {
-                        text-overflow: -o-ellipsis-lastline;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1;
-                        -webkit-box-orient: vertical;
-                        margin: 10px 0;
-                        span {
-                            font-size: 12px;
-                            display: inline-block;
-                            // padding: 0 2px;
-                            // margin: 0 0 10px 0;
-                        }
-                        span:nth-child(1) {
-                            border: 1px solid #FF7920;
-                            color: #FF7920;
-                        }
-                    }
-                    .moreimg {
-                        height: calc(100% - 10px);
-                        width: 100%;
-                        margin: 0;
-                        margin-left: 2px;
                     }
                 }
             }
@@ -181,7 +147,11 @@ body {
     }
 }
 
-img {
+#example_video_1 {
+    float: left;
+}
+
+#vue img {
     transition: opacity 1.5s !important;
 }
 
@@ -203,7 +173,7 @@ img {
 
 @media (min-width: 768px) {
     .right-content ul {
-        margin-left: 10px;
+        margin-left: 55px;
     }
     .box .news-title {
         font-weight: 600;
@@ -215,26 +185,28 @@ img {
         overflow: hidden;
         height: 140px;
     }
+    .div-img {
+        width: 550px;
+    }
+    .right-content ul {
+        width: 70%!important;
+    }
 }
 
 @media (min-width: 992px) {
+    .div-img {
+        width: 550px;
+    }
     .right-content ul {
-        margin-left: 20px;
-    }
-    .box .news-title {
-        font-weight: 600;
-        font-size: 24px!important;
-        line-height: 1.4!important;
-    }
-    img {
-        height: 200px;
-        padding: 10px 10px 10px 0;
-    }
-    .container .right-content ul li .right-content-a {
-        display: block;
-        overflow: hidden;
-        height: 200px;
+        width: 70%!important;
     }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .right-content ul {
+        width: 60%!important;
+    }
+    .right-content ul {
+        margin-left: 75px;
+    }
+}

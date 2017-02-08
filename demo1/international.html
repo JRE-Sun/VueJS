@@ -20,7 +20,8 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="index.html">社会</a></div>
                 <div class="swiper-slide"><a href="funny.html">搞笑</a></div>
-
+                <div class="swiper-slide"><a href="jokepic.html">动图</a></div>
+                <div class="swiper-slide"><a href="joketext.html">笑话</a></div>
                 <div class="swiper-slide"> <a href="technology.html">科技</a></div>
                 <div class="swiper-slide"><a href="entertainment.html">娱乐</a></div>
                 <div class="swiper-slide"><a href="car.html">汽车</a></div>
@@ -43,7 +44,12 @@
                     <li>
                         <a href="funny.html">搞笑</a>
                     </li>
-
+                    <li>
+                        <a href="jokepic.html">动图</a>
+                    </li>
+                    <li>
+                        <a href="joketext.html">笑话</a>
+                    </li>
                     <li>
                         <a href="technology.html">科技</a>
                     </li>
@@ -80,7 +86,6 @@
                     <ul class="row">
                         <li class="row" class="col-xs-12" v-for="item in items">
 
-
                             <template v-if=item.havePic>
                         
                                    <template v-if=item.imageurls.length==1 >
@@ -93,10 +98,11 @@
                                     <span>{{item.pubDate}}</span>
                                 </div>
                             </div>
-                                        <a target="_blank"  class="col-xs-4 col-md-4 right-content-a" :href='item.link'><img :src='item.imageurls[0].url' alt="抱歉服务器爆了，请刷新一下"></a>
+                                        <a target="_blank"  class="col-xs-4 col-md-4 right-content-a" :href='item.link'><img src="http://oj3eoe0eo.bkt.clouddn.com/a.png" v-lazyload:opt.fadein='item.imageurls[0].url' alt="抱歉服务器爆了，请刷新一下"></a>
                                         
                                     </template>
-                            <template v-else-if=item.imageurls.length==2>
+                            <template v-else>
+ <template v-if=item.imageurls.length==2>
                                       <div class="col-xs-8 col-md-8 box">
                                 <a target="_blank" class="news-title" :href='item.link'>{{item.title}}</a>
                                 
@@ -106,7 +112,7 @@
                                     <span>{{item.pubDate}}</span>
                                 </div>
                             </div>
-                                        <a target="_blank"  class="col-xs-4 col-md-4 right-content-a" :href='item.link'><img :src='item.imageurls[0].url' alt="抱歉服务器爆了，请刷新一下"></a>
+                                        <a target="_blank"  class="col-xs-4 col-md-4 right-content-a" :href='item.link'><img src="http://oj3eoe0eo.bkt.clouddn.com/a.png" v-lazyload:opt.fadein='item.imageurls[0].url' alt="抱歉服务器爆了，请刷新一下"></a>
                                        
                                     </template>
                             <template v-else>
@@ -119,11 +125,13 @@
                                     <span>{{item.pubDate}}</span>
                                 </div>
                             </div><div class="col-xs-12 box">
-                                        <a target="_blank"  class="col-xs-4 right-content-a" :href='item.link'><img class="moreimg" :src='item.imageurls[0].url' alt="抱歉服务器爆了，请刷新一下"></a>
-                                         <a target="_blank"  class="col-xs-4 right-content-a" :href='item.link'><img class="moreimg" :src='item.imageurls[1].url' alt="抱歉服务器爆了，请刷新一下"></a>
-                                          <a target="_blank"  class="col-xs-4 right-content-a" :href='item.link'><img class="moreimg" :src='item.imageurls[2].url' alt="抱歉服务器爆了，请刷新一下"></a>
+                                        <a target="_blank"  class="col-xs-4 right-content-a" :href='item.link'><img class="moreimg" src="http://oj3eoe0eo.bkt.clouddn.com/a.png" v-lazyload:opt.fadein='item.imageurls[0].url' alt="抱歉服务器爆了，请刷新一下"></a>
+                                         <a  target="_blank" class="col-xs-4 right-content-a" :href='item.link'><img class="moreimg" src="http://oj3eoe0eo.bkt.clouddn.com/a.png" v-lazyload:opt.fadein='item.imageurls[1].url' alt="抱歉服务器爆了，请刷新一下"></a>
+                                          <a target="_blank"  class="col-xs-4 right-content-a" :href='item.link'><img class="moreimg" src="http://oj3eoe0eo.bkt.clouddn.com/a.png" v-lazyload:opt.fadein='item.imageurls[2].url' alt="抱歉服务器爆了，请刷新一下"></a>
                                         <br/></div>
                                     </template>
+                            </template>
+
 
                             </template>
                             <template v-else>
@@ -148,14 +156,13 @@
     </div>
 
 
-    <!--<a href="http://v.juhe.cn/joke/randJoke.php?key=e4a374b02eeb3945255703caf4816535&type=pi">aaa</a>-->
     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <!--<script src="http://v.juhe.cn/toutiao/index?type=top&key=84f8ec4cc989878d051dfc851b8c250a"></script>-->
-    <!--<script src="js/jquery.jsonp.js"></script>-->
-    <script src="http://oj3eoe0eo.bkt.clouddn.com/vue.min.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/vue2.min.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/vue2.lazyimg.js"></script>
     <script src="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.js"></script>
+    <!--<script src="http://oj3eoe0eo.bkt.clouddn.com/html5media.min.js"></script>-->
     <script src="http://oj3eoe0eo.bkt.clouddn.com/swiper.min.js"></script>
-    <!--<script src="http://oj3eoe0eo.bkt.clouddn.com/vue.lazyimg.js"></script>-->
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/video.js"></script>
     <script src="js/international.js"></script>
 
 </body>

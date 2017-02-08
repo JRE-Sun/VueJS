@@ -1,8 +1,8 @@
 window.onload = function() {
     Vue.use(Vue.lazyimg, {});
     var app;
-    var newsId = "5572a10bb3cdc86cf39001f7";
-    var firsturl = "https://route.showapi.com/109-35?channelId=" + newsId + "&maxResult=20&needAllList=0&needContent=0&needHtml=0&page=1&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
+    var newsId = "5572a10bb3cdc86cf39001f8";
+    var firsturl = "https://route.showapi.com/341-3?maxResult=20&page=1&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
     $.ajax({
         type: "get",
         url: firsturl,
@@ -10,11 +10,11 @@ window.onload = function() {
         success: function(json) {
             // alert(json);
             console.log(json);
-            console.log(json.showapi_res_body.pagebean.contentlist[4].imageurls.length);
+            // console.log(json.showapi_res_body.pagebean.contentlist[4].imageurls.length);
             app = new Vue({
                 el: '#app',
                 data: {
-                    items: json.showapi_res_body.pagebean.contentlist,
+                    items: json.showapi_res_body.contentlist,
                     isActive: false
                 },
                 methods: {
@@ -45,14 +45,14 @@ window.onload = function() {
         console.log(sm);
         console.log(dsm);
         if (dsm == sm) {
-            var myurl = "https://route.showapi.com/109-35?channelId=" + newsId + "&maxResult=20&needAllList=0&needContent=0&needHtml=0&page=" + (++page) + "&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
+            var myurl = "https://route.showapi.com/341-3?maxResult=20&page=" + (++page) + "&showapi_appid=31610&showapi_sign=794da37ef6d548bdb3faf07de393bc6d";
             $.ajax({
                 type: "get",
                 url: myurl,
                 dataType: "json",
                 success: function(json) {
-                    for (var i = 0; i < json.showapi_res_body.pagebean.contentlist.length; i++) {
-                        app.loadMore(json.showapi_res_body.pagebean.contentlist[i]);
+                    for (var i = 0; i < json.showapi_res_body.contentlist.length; i++) {
+                        app.loadMore(json.showapi_res_body.contentlist[i]);
                     }
                     console.log(json);
                 },
@@ -80,11 +80,12 @@ window.onload = function() {
             }
         })
         // 固定导航条代码结束
+
+
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         slidesPerView: 6,
         paginationClickable: true,
-        freeMode: true,
-        initialSlide: 3
+        freeMode: true
     });
 }
